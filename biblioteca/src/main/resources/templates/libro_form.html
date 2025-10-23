@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiblioSystem</title>
+</head>
+<body>
+<h1>Agregar libro</h1>
+
+<form th:action="@{/libro/guardar}" th:object="${libro}" method="post" id="libroForm">
+
+    <label for="isbn">ISBN: </label>
+    <input type="text" id="isbn" name="isbn" placeholder="Ej: +56 9 1234 5678">
+
+
+
+    <label for="titulo">TITULO: </label>
+    <input type="text" id="titulo" name="titulo" placeholder="Ingresar titulo">
+
+
+
+    <label for="autor">AUTOR: </label>
+    <input type="text" id="autor" name="autor">
+
+
+
+    <label for="anioPublicacion">Año de publicación: </label>
+    <input type="text" id="anioPublicacion" name="anioPublicacion" placeholder="Ej: 2023">
+
+
+
+    <label for="stock">STOCK: </label>
+    <input type="text" id="stock" name="stock" placeholder="Ej: 50">
+
+
+
+    <button type="submit" name="Enviar" id="enviar">Enviar</button>
+</form>
+
+</body>
+</html>
